@@ -94,6 +94,7 @@ public class graphsTwo {
 
         graph[4].add(new Edge(4,2));
     }
+    //BFS UNDIRECTED
     public static boolean cycle(ArrayList<Edge> graph[]){
         boolean vis[] = new boolean[graph.length];
         for(int i=0;i<graph.length;i++){

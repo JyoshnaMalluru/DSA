@@ -52,6 +52,7 @@ public class PrimsAlgorithm {
             Pair curr = pq.remove();
             if(!visit[curr.v]){
                 visit[curr.v]= true;
+                System.out.println(curr.cost);
                 finalCost+=curr.cost;
 
                 for(int i=0;i<graph[curr.v].size();i++){

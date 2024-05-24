@@ -35,7 +35,7 @@ public class Heaps {
         }
       }
 
-      public int peek(){
+      public int peek() {
         return arr.get(0);
       }
 

@@ -28,54 +28,55 @@ public class TopologicalSortGraphs {
     
 
     //TOPOGICAL SORT USING BFS
-    // public static void calcIndegree(ArrayList<Edge> graph[],int indegree[]){
-    //     for(int i=0;i<graph.length;i++){
-    //         int v = i;
-    //         for(int j=0;j<graph[v].size();j++){
-    //             Edge e = graph[v].get(j);
-    //             indegree[e.dest]++;
-    //         }
-    //     }
-    // }
-    // public static void topSort(ArrayList<Edge> graph[]){
-    //     int indegree[] = new int [graph.length];
-    //     calcIndegree(graph, indegree);
-    //     Queue<Integer>q = new LinkedList<>();
-
-    //     for(int i=0;i<indegree.length;i++){
-    //         if(indegree[i] ==0){
-    //             q.add(i);
-    //         }
-    //     }
-    //     //bfs
-    //     while(!q.isEmpty()){
-    //      int curr = q.remove();
-    //      System.out.print(curr+" ");
-
-    //      for(int i=0;i<graph[curr].size();i++){
-    //         Edge e = graph[curr].get(i);
-    //         indegree[e.dest]--;
-    //         if(indegree[e.dest]==0){
-    //             q.add(e.dest);
-    //         }
-    //      }
-    //     }
-    //     System.out.println();
-    // }
-    //TOPOGICAL SORT USING DFS
-    public static void topSort(ArrayList<Edge> graph[]){//DFS//O(V+E)
-        boolean visit[] = new boolean[graph.length];
-        Stack<Integer> s = new Stack<>();
-
+    public static void calcIndegree(ArrayList<Edge> graph[],int indegree[]){
         for(int i=0;i<graph.length;i++){
-            if(!visit[i]){
-                topSortUtil(graph,i,visit,s);
+            int v = i;
+            for(int j=0;j<graph[v].size();j++){
+                Edge e = graph[v].get(j);
+                indegree[e.dest]++;
             }
         }
-        while (!s.isEmpty()) {
-            System.out.print(s.pop()+" ");
-        }
     }
+    public static void topSort(ArrayList<Edge> graph[]){
+        int indegree[] = new int [graph.length];
+        calcIndegree(graph, indegree);
+        Queue<Integer>q = new LinkedList<>();
+
+        for(int i=0;i<indegree.length;i++){
+            if(indegree[i] ==0){
+                q.add(i);
+            }
+        }
+        //bfs
+        while(!q.isEmpty()){
+         int curr = q.remove();
+         System.out.print(curr+" ");
+
+         for(int i=0;i<graph[curr].size();i++){
+            Edge e = graph[curr].get(i);
+            indegree[e.dest]--;
+            if(indegree[e.dest]==0){
+                q.add(e.dest);
+            }
+         }
+        }
+        System.out.println();
+    }
+    
+    //TOPOGICAL SORT USING DFS
+    // public static void topSort(ArrayList<Edge> graph[]){//DFS//O(V+E)
+    //     boolean visit[] = new boolean[graph.length];
+    //     Stack<Integer> s = new Stack<>();
+
+    //     for(int i=0;i<graph.length;i++){
+    //         if(!visit[i]){
+    //             topSortUtil(graph,i,visit,s);
+    //         }
+    //     }
+    //     while (!s.isEmpty()) {
+    //         System.out.print(s.pop()+" ");
+    //     }
+    // }
 
     public static void topSortUtil(ArrayList<Edge> graph[], int curr, boolean visit[], Stack <Integer> s){//DFS
         visit[curr] = true;

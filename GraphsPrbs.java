@@ -130,7 +130,7 @@ public class GraphsPrbs {
         int parB = find(b);
 
         if(rank[parA] == rank[parB]){
-            par[parA]= parA;
+            par[parB]= parA;
             rank[parA]++;
         }else if(rank[parA] < rank[parB]){
             par[parA] = parB; 
@@ -185,7 +185,7 @@ public class GraphsPrbs {
         int parB = find(b);
 
         if(rank[parA] == rank[parB]){
-            par[parA]= parA;
+            par[parB]= parA;
             rank[parA]++;
         }else if(rank[parA] < rank[parB]){
             par[parA] = parB; 
