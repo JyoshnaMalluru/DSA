@@ -74,7 +74,7 @@ public class graphsSupplemental {
             int curr = s.pop();
             if(!vis[curr]){
                 System.out.print("ssc ->");
-                dfs(transpose,curr,vis);
+                //dfs(transpose,curr,vis);
                 System.out.println();
             }
         }
