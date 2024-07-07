@@ -78,7 +78,7 @@ public class TriesPrbs {
         }
 
         for(int i=0;i<root.children.length;i++){
-            if(root.children!= null){
+            if(root.children[i]!= null){
                 findPrefix(root.children[i], ans+(char)(i+'a'));
             }
         }
@@ -86,29 +86,29 @@ public class TriesPrbs {
 
     public static String ans = "";
 
-    public static void longestWord(Node root, StringBuilder temp){
-        if(root == null){
-            return;
-        }
-        for(int i=0;i<26;i++){
-            if(root.children[i] != null && root.children[i].eOW == true){
-                char ch = (char)(i+'a');
-                temp.append(ch);
-                if(temp.length() > ans.length()){
-                    ans = temp.toString();
-                }
-                longestWord(root.children[i], temp);
-                temp.deleteCharAt(temp.length()-1);
-            }
-        }
-    }
+    // public static void longestWord(Node root, StringBuilder temp){
+    //     if(root == null){
+    //         return;
+    //     }
+    //     for(int i=0;i<26;i++){
+    //         if(root.children[i] != null && root.children[i].eOW == true){
+    //             char ch = (char)(i+'a');
+    //             temp.append(ch);
+    //             if(temp.length() > ans.length()){
+    //                 ans = temp.toString();
+    //             }
+    //             longestWord(root.children[i], temp);
+    //             temp.deleteCharAt(temp.length()-1);
+    //         }
+    //     }
+    // }
     public static void main(String[] args) {
-        //String arr[] = {"zebra","dog","duck","dove"};
-        // for(int i =0;i<arr.length;i++ ){
-        //     insert(arr[i]);
-        // }
-        //root.freq= -1;
-        //findPrefix(root,"");
+        String arr[] = {"zebra","dog","duck","dove"};
+        for(int i =0;i<arr.length;i++ ){
+            insert(arr[i]);
+        }
+        root.freq= -1;
+        findPrefix(root,"");
 
 
         // String words[] = {"apple","app","man","mango","woman"};
@@ -132,13 +132,13 @@ public class TriesPrbs {
         // System.out.println(countNodes(root));
 
 
-        String str []= {"a","banana","app","ap","appl","apply","apple"};
+        // String str []= {"a","banana","app","ap","appl","apply","apple"};
 
-        for(int i=0;i<str.length;i++){
-            insert(str[i]);
-        }
-        longestWord(root, new StringBuilder(""));
-        System.out.println(ans);
+        // for(int i=0;i<str.length;i++){
+        //     insert(str[i]);
+        // }
+        // longestWord(root, new StringBuilder(""));
+        // System.out.println(ans);
 
     }
 }

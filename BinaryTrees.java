@@ -408,7 +408,7 @@ public class BinaryTrees {
         // tree.preOrder(root);
         // tree.inOrder(root);
         // tree.postOrder(root);
-        tree.levelOrder(root);
+        //tree.levelOrder(root);
 
         /*
          *             1

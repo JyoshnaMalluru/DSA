@@ -116,7 +116,7 @@ public class TwoDArrayList {
        // System.out.println(pairSum(list,target));
 
 
-       /*  ArrayList<Integer>height= new ArrayList<>();
+        ArrayList<Integer>height= new ArrayList<>();
         //1,8,6,2,5,4,8,3,7
         height.add(1);
         height.add(8);
@@ -127,12 +127,12 @@ public class TwoDArrayList {
         height.add(8);
         height.add(3);
         height.add(7);
-//      System.out.println(waterContain(height));
-        System.out.println(storeWater(height));*/
+        System.out.println(waterContain(height));
+        System.out.println(storeWater(height));
 
 
         //TWO D ARRAYLIST 
-        ArrayList<ArrayList<Integer>> mainList = new ArrayList<>();
+        //ArrayList<ArrayList<Integer>> mainList = new ArrayList<>();
         /*ArrayList<Integer> list = new ArrayList<>();
         list.add(1);
         list.add(2);
@@ -167,27 +167,27 @@ public class TwoDArrayList {
         System.out.println(mainList);*/
 
 
-        ArrayList<Integer> listA = new ArrayList<>();
-        ArrayList<Integer> listB = new ArrayList<>();
-        ArrayList<Integer> listC = new ArrayList<>();
-         for(int num=1;num<=5;num++){
-            listA.add(1*num);
-            listB.add(2*num);
-            listC.add(3*num);
-         }
-         mainList.add(listA);
-         mainList.add(listB);
-         mainList.add(listC);
-         listB.remove(2);
-         listB.remove(3);
-         for(int lst=0;lst<mainList.size();lst++){
-            ArrayList<Integer> currList = mainList.get(lst);
-            for(int idx=0;idx<currList.size();idx++){
-                System.out.print(currList.get(idx)+" ");
-            }
-            System.out.println();
-        }
-         System.out.println(mainList);
+    //     ArrayList<Integer> listA = new ArrayList<>();
+    //     ArrayList<Integer> listB = new ArrayList<>();
+    //     ArrayList<Integer> listC = new ArrayList<>();
+    //      for(int num=1;num<=5;num++){
+    //         listA.add(1*num);
+    //         listB.add(2*num);
+    //         listC.add(3*num);
+    //      }
+    //      mainList.add(listA);
+    //      mainList.add(listB);
+    //      mainList.add(listC);
+    //      listB.remove(2);
+    //      listB.remove(3);
+    //      for(int lst=0;lst<mainList.size();lst++){
+    //         ArrayList<Integer> currList = mainList.get(lst);
+    //         for(int idx=0;idx<currList.size();idx++){
+    //             System.out.print(currList.get(idx)+" ");
+    //         }
+    //         System.out.println();
+    //     }
+    //      System.out.println(mainList);
 
-    }
+     }
 }

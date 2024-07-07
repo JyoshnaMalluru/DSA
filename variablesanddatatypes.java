@@ -8,7 +8,7 @@ public class variablesanddatatypes{
         int c= sc.nextInt();
         int sum = a+b+c;
         float avg = sum/3;
-        System.out.println(avg);//
+        System.out.println(avg);
         int side = sc.nextInt();
         int area = side*side;
         System.out.println(area);

@@ -42,7 +42,6 @@ public class SegmentTrees {
             int mid = (si+sj)/2;
             updateUtil(2*i+1, si, mid, idx, diff);
             updateUtil(2*i+2, mid+1, sj, idx, diff);
-
         }
     }
     public static void update(int arr[], int idx,int newValue){

@@ -24,9 +24,9 @@ public class HashSetPrbs {
             nums.add(arr[i]);
         }
 
-        // System.out.print(nums);
+        System.out.print(nums);
         // System.out.println();
-        // System.out.println("Distinct Count is "+ nums.size());
+        System.out.println("Distinct Count is "+ nums.size());
 
 
         //UNION AND INTERSECTION OF TWO ARRAYS
@@ -73,9 +73,9 @@ public class HashSetPrbs {
        tickets.put("Delhi", "Goa");
 
        String start = getStart(tickets);
-       //System.out.print(start);
+       System.out.print(start);
        for (String key : tickets.keySet()) {
-          // System.out.print("->"+tickets.get(start));
+           System.out.print("->"+tickets.get(start));
            start = tickets.get(start);
        }
        System.out.println();
